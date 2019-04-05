@@ -5,6 +5,7 @@ import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+console.log(cardData);
 
 export default class Content extends Component {
   constructor(props) {
@@ -27,6 +28,11 @@ export default class Content extends Component {
   };
 
   filterCards = () => {
+    
+    
+    if(selectedTab === 'all') {
+      return {cardData}
+    }
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
       by using it to filter out our cards for when a tab is selected
@@ -37,6 +43,7 @@ export default class Content extends Component {
       Your algorithim for the logic here is as follows: 
         - if the selected tab is 'all' it should return all 
           of the items from cardData. 
+        
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
     return this.state.cards;
@@ -51,8 +58,8 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <div className="selected-tabs"
-        selectedTab={this.tabs}
-        selectedTabHandler
+        selectedTab={props.}
+        selectedTabHandler={this.changeSelected}
         ></div>
         <Tabs tabs={this.state.tabs} />
         <Cards cards={this.filterCards()} />
