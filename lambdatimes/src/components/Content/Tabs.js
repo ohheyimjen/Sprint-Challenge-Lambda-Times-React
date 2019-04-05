@@ -1,5 +1,6 @@
 import React from 'react';
 import Tab from './Tab';
+import PropTypes from 'prop-types';
 
 const Tabs = props => {
   return (
@@ -19,11 +20,11 @@ const Tabs = props => {
   );
 };
 
+Tabs.PropTypes = {
+  tabsObject: PropTypes.shape({
+    selectedTab: PropTypes.string
+  })
+  
+}
 // Make sure to use PropTypes to validate your types!
 export default Tabs;
-
-// return (
-//   <div className="shopping-list">
-//     {props.groceries.map(item => (
-//       <Item key={item.id} item={item} toggleItem={props.toggleItem} />
-//     ))}

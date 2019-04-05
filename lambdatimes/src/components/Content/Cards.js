@@ -19,7 +19,10 @@ const Cards = props => {
 
 // Make sure you include prop types for all of your incoming props
 Cards.PropTypes = {
-  
+  cardObject: PropTypes.shape({
+    key: PropTypes.string,
+    card: PropTypes.string
+  })
 }
 
 export default Cards;

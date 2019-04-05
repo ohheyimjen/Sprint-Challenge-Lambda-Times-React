@@ -25,5 +25,10 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
+// Tab.PropType= {
+//   tabObject: PropType.shape({
+//     onClick: PropType.onClick
+//   })
+// }
 
 export default Tab;
