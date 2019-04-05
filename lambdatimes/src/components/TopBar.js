@@ -34,6 +34,12 @@ const ContainerLeftDIV = sc.div`
   font-size: 11px;
 `;
 
+const ContainerLeftSPAN = sc.span`
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
+`;
+
 const ContainerCenterDIV = sc.div`
   display: flex;
   justify-content: center;
@@ -41,6 +47,16 @@ const ContainerCenterDIV = sc.div`
   flex-direction: row;
   flex: 3;
   font-size: 9px;
+`;
+
+const ContainerCenterSPAN = sc.span`
+  cursor: pointer;
+  margin-right: 5%;
+`;
+
+const ContainerCenterSPANLAST = sc.span`
+  cursor: pointer;
+  margin-right: 0;
 `;
 
 
@@ -63,10 +79,10 @@ const TopBar = () => {
     <TopBarDiv>
       <ContainerDIV>
         <ContainerLeftDIV>
-          <span>TOPICS</span><span>SEARCH</span>
+          <ContainerLeftSPAN>TOPICS</ContainerLeftSPAN><ContainerLeftSPAN>SEARCH</ContainerLeftSPAN>
         </ContainerLeftDIV>
         <ContainerCenterDIV>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          <ContainerCenterSPAN>GENERAL</ContainerCenterSPAN><ContainerCenterSPAN>BROWNBAG</ContainerCenterSPAN><ContainerCenterSPAN>RANDOM</ContainerCenterSPAN><ContainerCenterSPAN>MUSIC</ContainerCenterSPAN><ContainerCenterSPANLAST>ANNOUNCEMENTS</ContainerCenterSPANLAST>
         </ContainerCenterDIV>
       <ContainerRightDIV>
           <ContainerRightSPAN>LOG IN</ContainerRightSPAN>

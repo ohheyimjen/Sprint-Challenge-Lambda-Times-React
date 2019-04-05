@@ -31,14 +31,18 @@ const HeaderH1 = sc.h1`
   color: #000;
 `;
 
-
+const HeaderTemp = sc.span`
+  text-align: right;
+  margin-right: 25px;
+  flex: 1;
+`;
 
 const Header = () => {
   return (
     <HeaderDIV>
       <HeaderSPAN>SMARCH 32, 2018</HeaderSPAN>
       <HeaderH1>Lambda Times</HeaderH1>
-      <span className="temp">98°</span>
+      <HeaderTemp>98°</HeaderTemp>
     </HeaderDIV>
   )
 }
